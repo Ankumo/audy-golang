@@ -1,0 +1,85 @@
+div.alert {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: var(--alert-bg);
+    border-radius: 6px;
+    padding: 16px;
+    justify-content: flex-start;
+    margin-top: 16px;
+    box-shadow: 0 0 0 2px transparent;
+}
+
+div.alert img.svg {
+    width: 20px;
+    height: 20px;
+    margin-left: auto;
+    justify-self: flex-end;
+    align-self: flex-start;
+}
+
+div.alert-enter {
+    opacity: 0;
+    margin-top: -16px;
+}
+
+div.alert-enter-active {
+    opacity: 1;
+    margin-top: 16px;
+    transition: opacity .2s, margin-top .2s;
+}
+
+div.alert-exit {
+    opacity: 1;
+}
+
+div.alert-exit-active {
+    opacity: 0;
+    margin-top: -48px;
+    transition: opacity .2s, margin-top .2s;
+}
+
+div.alert span {
+    color: var(--alert-text);
+    /* white-space: nowrap; */
+    /* overflow: hidden; */
+    /* text-overflow: ellipsis; */
+    margin-right: 8px;
+}
+
+div.alert>span>label {
+    cursor: pointer;
+    font-size: 17px;
+    text-decoration: underline;
+    color: var(--alert-text);
+}
+
+div.alert.info {
+    /* box-shadow: 0 0 0 2px rgb(0, 122, 255); */
+    background: var(--info);
+}
+
+div.alert.error {
+    /* box-shadow: 0 0 0 2px rgb(255, 59, 48); */
+    background: var(--danger);
+}
+
+div.alert.warning {
+    /* box-shadow: 0 0 0 2px rgb(255, 149, 0); */
+    background: var(--warning);
+}
+
+div.alert.warning>span,
+div.alert.warning>span>label {
+    color: var(--alert-warning-text);
+}
+
+div.alert.info>span,
+div.alert.info>span>label {
+    color: var(--alert-info-text);
+}
+
+div.alert.error>span,
+div.alert.error>span>label {
+    color: var(--alert-error-text);
+}

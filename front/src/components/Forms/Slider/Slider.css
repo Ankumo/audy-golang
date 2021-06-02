@@ -1,0 +1,82 @@
+div.slider {
+    min-width: 100px;
+    height: 4px;
+    padding: 8px 0;
+    width: fit-content;
+    cursor: pointer;
+    position: relative;
+}
+
+div.slider.vertical {
+    width: 4px;
+    min-height: 100px;
+    min-width: unset;
+    height: fit-content;
+    padding: 0 8px;
+}
+
+div.slider::after {
+    content: '';
+    display: block;
+    height: 4px;
+    width: 100%;
+    border-radius: 6px;
+    background: var(--bg-primary);
+}
+
+div.slider.vertical::after {
+    height: 100%;
+    width: 4px;
+    position: absolute;
+    z-index: 3;
+}
+
+div.slider div.thumb {
+    width: 12px;
+    height: 12px;
+    border-radius: 12px;
+    position: absolute;
+    background: var(--bg-secondary);
+    top: 4px;
+    left: 0;
+    opacity: 0;
+    margin: 0 0 0 -4px;
+    z-index: 10;
+    box-sizing: border-box;
+    transition: opacity .2s, border-color .2s;
+}
+
+div.slider.vertical div.thumb {
+    left: 4px;
+    top: unset;
+    margin: 0 0 -4px 0;
+    bottom: 0;
+}
+
+div.slider div.thumb:hover,
+div.slider.dragging div.thumb {
+    border: 1px solid var(--bg-primary);
+}
+
+div.slider div.progress {
+    background: var(--bg-secondary);
+    border-radius: 6px;
+    height: 4px;
+    position: absolute;
+    z-index: 5;
+    margin: auto 0;
+    top: 0;
+    bottom: 0;
+}
+
+div.slider.vertical div.progress {
+    bottom: 0;
+    height: 0;
+    width: 4px;
+    top: unset;
+}
+
+div.slider:hover div.thumb,
+div.slider.dragging div.thumb {
+    opacity: 1;
+}

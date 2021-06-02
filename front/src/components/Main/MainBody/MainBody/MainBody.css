@@ -1,0 +1,15 @@
+div.app-wrapper div.main {
+    position: relative;
+    overflow-x: hidden;
+}
+
+div.app-wrapper div.main div.searchbar {
+    margin: 10px auto 0 auto;
+    width: 35%;
+}
+
+div.app-wrapper div.main div.main-wrapper {
+    display: flex;
+    flex-direction: column;
+    max-height: calc(100vh - 78px);
+}

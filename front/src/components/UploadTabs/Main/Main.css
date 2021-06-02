@@ -1,0 +1,77 @@
+div.upload-tab.main div.modal-body {
+    background-color: var(--bg-primary);
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+div.upload-tab.main div.modal-header {
+    padding: 24px;
+}
+
+div.upload-tab.main div.modal-body div.upload-main-btn {
+    width: 150px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--divider);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background .2s;
+    height: 150px;
+    padding: 8px;
+    padding-top: 0;
+    position: relative;
+}
+
+div.upload-tab.main div.modal-body>span {
+    margin: 16px;
+}
+
+div.upload-tab.main div.modal-body div.upload-main-btn:hover {
+    background: var(--divider);
+}
+
+div.upload-tab.main div.modal-body div.upload-main-btn img {
+    width: 64px;
+    height: 64px;
+}
+
+div.upload-tab.main div.modal-body div.upload-main-btn span {
+    color: var(--text-primary-active);
+    text-align: center;
+    margin-top: 8px;
+    height: 16px;
+    line-height: 110%;
+}
+
+div.upload-tab.main div.modal-body div.upload-main-btn div.slider {
+    opacity: 0;
+    padding: 0;
+}
+
+div.upload-tab.main div.modal-body div.upload-main-btn.upload-active div.slider {
+    opacity: 1;
+    padding: 0;
+    width: calc(100% - 16px);
+    position: absolute;
+    bottom: 8px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+div.upload-tab div.modal-body table tbody tr td img.success {
+    filter: var(--upload-table-icon-success-filter);
+}
+
+div.upload-tab div.modal-body table tbody tr td img.warning {
+    filter: var(--upload-table-icon-warning-filter);
+}
+
+div.upload-tab div.modal-body table tbody tr td img.error {
+    filter: var(--upload-table-icon-error-filter);
+}

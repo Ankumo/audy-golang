@@ -1,0 +1,44 @@
+div.modal {
+    position: fixed;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: calc(100vh - 78px);
+    background: var(--modal-fade);
+    z-index: 9;
+    overflow-y: auto;
+    display: flex;
+    margin-bottom: 78px;
+}
+
+div.modal div.modal-wrapper {
+    width: 600px;
+    min-height: 400px;
+    background: var(--modal-bg);
+    margin: auto;
+    border-radius: 6px;
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: min-content auto min-content;
+    grid-template-columns: auto;
+    position: relative;
+}
+
+div.modal div.modal-wrapper div.modal-body {
+    padding: 8px 16px;
+}
+
+div.modal div.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--text-primary-active);
+}
+
+div.modal div.modal-header img.svg {
+    width: 24px;
+    height: 24px;
+    padding: 24px;
+}

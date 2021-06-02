@@ -1,0 +1,64 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Inter, sans-serif;
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+html,
+body,
+div#root {
+    width: 100%;
+    height: 100%;
+}
+
+*::-webkit-scrollbar {
+    width: 8px;
+    background: var(--scrollbar-bg);
+}
+
+*::-webkit-scrollbar-track {
+    background: var(--scrollbar-bg);
+    margin: 8px 0;
+}
+
+*::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb);
+    border-radius: 50px;
+    min-height: 60%;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbar-thumb-hover);
+}
+
+img.svg {
+    filter: var(--svg-filter);
+    opacity: .5;
+    transition: opacity .2s;
+}
+
+img.svg.hover:hover {
+    opacity: .85;
+    cursor: pointer;
+}
+
+div.login-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+div.login-form form {
+    width: 300px;
+}
+
+div.login-form form div.form-input,
+div.login-form form button {
+    width: 100%;
+    margin: 16px 0;
+}

@@ -1,0 +1,49 @@
+:root {
+    --text-primary: #88878B;
+    --text-primary-active: #F3F2F9;
+    --text-secondary: rgb(101, 100, 104);
+    --text-secondary-active: black;
+    --text-active: rgba(255, 224, 0, 0.85);
+    --bg-primary: rgb(62, 61, 61);
+    --bg-secondary: #fc0;
+    --main-bg-primary: rgb(255, 255, 255, .1);
+    --main-bg-secondary: rgba(255, 204, 0, 0.5);
+    --bg-context: rgba(255, 255, 255, .05);
+    --scrollbar-bg: transparent;
+    --scrollbar-thumb: rgba(255, 255, 255, .1);
+    --scrollbar-thumb-hover: rgba(255, 255, 255, .25);
+    --main-bg: rgba(8, 8, 9, 0.93);
+    --main-bg-whiteboard: rgb(255, 255, 255);
+    --divider: rgb(80, 80, 82);
+    --alert-bg: var(--main-bg-primary);
+    --alert-text: var(--text-primary-active);
+    --alert-info-text: var(--text-primary-active);
+    --alert-warning-text: var(--text-primary-active);
+    --alert-error-text: var(--text-primary-active);
+    --loading-bg: linear-gradient(45deg, rgb(35, 35, 37), rgb(80, 79, 82));
+    --loading-text: var(--text-primary-active);
+    --modal-bg: rgb(45, 45, 45);
+    --modal-fade: rgba(0, 0, 0, .7);
+    --avatar-hover: rgba(255, 255, 255, .5);
+    --settings-bg: rgb(20, 20, 22);
+    --music-seekbar-bg: rgb(80, 80, 80);
+    --music-seekbar-buffer: rgb(218, 218, 218);
+    --music-seekbar-progress: rgb(255, 204, 0);
+    --frame: var(--text-primary);
+    --frame-active: var(--text-primary-active);
+    --warning: rgb(255, 149, 0);
+    --success: rgb(50, 215, 75);
+    --danger: rgb(255, 59, 48);
+    --info: rgb(0, 122, 255);
+}
+
+:root:not(.colors) {
+    --bg-filter: blur(23px);
+    --svg-filter: invert(100%);
+    --svg-filter-invert: unset;
+    --upload-table-icon-success-filter: invert(48%) sepia(47%) saturate(5653%) hue-rotate(111deg) brightness(93%) contrast(102%);
+    --upload-table-icon-error-filter: invert(23%) sepia(89%) saturate(5299%) hue-rotate(19deg) brightness(96%) contrast(101%);
+    --upload-table-icon-warning-filter: invert(80%) sepia(36%) saturate(2164%) hue-rotate(12deg) brightness(101%) contrast(101%);
+    --seekbar-buffer-blend-mode: difference;
+    --seekbar-progress-blend-mode: hard-light;
+}

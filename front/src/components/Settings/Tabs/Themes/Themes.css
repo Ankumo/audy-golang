@@ -1,0 +1,92 @@
+div.themes div.settings-block.customize_themes div.block-body>button {
+    margin: 0 0 4px 0;
+}
+
+div.themes div.themes-controls {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 200px auto;
+    margin-top: 16px;
+}
+
+div.themes div.themes-controls ul {
+    list-style: none;
+}
+
+div.themes div.themes-controls ul li {
+    transition: background .2s;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+div.themes div.themes-controls ul li span {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    transition: color .2s;
+}
+
+div.themes div.themes-controls ul li:hover span,
+div.themes div.themes-controls ul li.active span {
+    color: var(--text-primary-active);
+}
+
+div.themes div.themes-controls ul li.active {
+    background: var(--bg-primary);
+}
+
+div.themes div.themes-controls ul li img {
+    opacity: 0;
+    transition: opacity .2s;
+    width: 20px;
+    height: 20px;
+}
+
+div.themes div.themes-controls ul li:hover img:not(:hover) {
+    opacity: 0.5;
+}
+
+div.themes div.colors {
+    margin-left: 16px;
+    float: left;
+}
+
+div.themes div.colors>div.color-input,
+div.themes div.colors>div.form-input {
+    margin: 8px 0;
+}
+
+div.themes div.colors div.form-input,
+div.themes div.colors div.divider {
+    width: 184px;
+}
+
+div.themes div.colors div.divider {
+    background: var(--divider);
+    height: .5px;
+    margin: 4px 0;
+}
+
+div.themes div.themes-controls div.editable-header {
+    margin-top: 6px;
+    max-width: 100%;
+}
+
+div.themes div.themes-controls div.editable-header span,
+div.themes div.themes-controls div.editable-header input {
+    font-size: 32px;
+}
+
+div.themes div.themes-controls div.editable-header::after {
+    width: 26px;
+    height: 26px;
+    background-size: 26px 26px;
+}
+
+div.themes div.settings-block.set_theme span.with-dropdown {
+    margin-top: 0;
+}

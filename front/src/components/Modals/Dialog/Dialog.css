@@ -1,0 +1,67 @@
+div.modal div.modal-wrapper {
+    min-height: auto;
+}
+
+div.modal div.modal-header {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 24px 16px 24px;
+}
+
+div.modal div.modal-header img.svg {
+    padding: 0 0 0 24px;
+}
+
+div.modal div.modal-header h3 {
+    color: var(--text-primary-active);
+    font-size: 22px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+div.modal div.modal-body {
+    padding: 0 24px 24px 24px !important;
+}
+
+div.modal div.modal-footer {
+    display: flex;
+    justify-content: space-evenly;
+    height: 50px;
+    align-items: center;
+}
+
+div.modal div.modal-footer>div {
+    width: 100%;
+    border-radius: 0;
+    text-align: center;
+    cursor: pointer;
+    margin: 0;
+    border-top: 1px solid var(--divider);
+    transition: color .2s, background-color .2s;
+    border-left: 1px solid var(--divider);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+div.modal div.modal-footer>div>* {
+    width: 100%;
+    margin: 0;
+}
+
+div.modal div.modal-footer>div:first-child {
+    border-left: none;
+}
+
+div.modal div.modal-footer div:hover {
+    background: var(--bg-primary);
+    color: var(--text-primary-active);
+}
+
+div.modal.loading div.modal-footer>div {
+    cursor: not-allowed;
+}

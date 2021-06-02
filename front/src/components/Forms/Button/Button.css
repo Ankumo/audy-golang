@@ -1,0 +1,62 @@
+button {
+    cursor: pointer;
+    transition: background .15s, color .2s;
+    border-radius: 6px;
+    padding: 8px 16px;
+    font-size: 16px;
+    font-weight: 500;
+    border: 0;
+    line-height: 32px;
+    display: inline-flex;
+    margin: 0 8px;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-primary);
+    background: transparent;
+}
+
+button:active,
+button:focus {
+    outline: none;
+}
+
+button:hover:not([disabled]) {
+    color: var(--text-primary-active);
+}
+
+button img {
+    width: 20px;
+    height: 20px;
+    transition: opacity .1s;
+    margin-right: 4px;
+}
+
+button:hover img {
+    opacity: .85;
+}
+
+button[accent="primary"] {
+    background: var(--bg-primary);
+}
+
+button[accent="secondary"] {
+    background: var(--bg-secondary);
+    color: var(--text-secondary);
+}
+
+button[accent="secondary"]:hover:not([disabled]) {
+    color: var(--text-secondary-active);
+}
+
+button[accent="secondary"] img {
+    filter: var(--svg-filter-invert);
+}
+
+button[disabled],
+button.loading {
+    cursor: not-allowed;
+}
+
+button.loading img {
+    animation: 1s linear 0s infinite spin;
+}

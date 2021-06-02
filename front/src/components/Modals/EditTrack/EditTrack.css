@@ -1,0 +1,3 @@
+div.modal div.modal-body div.form-input:not(:last-child) {
+    margin-bottom: 16px;
+}

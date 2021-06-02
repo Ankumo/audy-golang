@@ -1,0 +1,103 @@
+div.music-controls {
+    padding-top: 4px;
+    height: 74px;
+    margin: 0 300px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+div.music-controls ul.player-buttons {
+    list-style: none;
+    padding-right: 8px;
+    display: inline-flex;
+    align-items: center;
+}
+
+div.music-controls ul.player-buttons li {
+    margin: 0 16px;
+}
+
+div.music-controls ul.player-buttons li img {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+}
+
+@media (max-width: 1200px) {
+    div.music-controls {
+        margin: 0;
+    }
+    div.music-controls ul.player-buttons.left {
+        padding-left: 8px;
+    }
+}
+
+div.music-controls ul.player-buttons.right {
+    justify-self: flex-end;
+    margin-left: auto;
+}
+
+div.music-controls div.track-info {
+    display: inline-flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+div.music-controls div.track-info img {
+    width: 58px;
+    height: 58px;
+    border-radius: 4px;
+}
+
+div.music-controls div.track-info>div {
+    margin-left: 16px;
+    height: 100%;
+    cursor: pointer;
+}
+
+div.music-controls div.track-info>div span {
+    font-size: 16px;
+    width: 100%;
+    white-space: nowrap;
+    display: block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 300px;
+}
+
+div.music-controls div.track-info>div span.track-title {
+    color: var(--text-primary-active);
+}
+
+div.music-controls ul.player-buttons.right li.mute img {
+    width: 22px;
+    height: 22px;
+}
+
+div.music-controls ul.player-buttons.right li.repeat img {
+    width: 24px;
+    height: 24px;
+}
+
+div.music-controls ul.player-buttons li.volume {
+    display: inline-flex;
+    align-items: center;
+    margin: 0;
+    opacity: 0;
+    transition: opacity .2s, margin .2s;
+}
+
+div.music-controls ul.player-buttons.right li.mute {
+    margin-left: 0;
+}
+
+div.music-controls ul.player-buttons li.volume span {
+    font-size: 17px;
+    font-variant-numeric: tabular-nums;
+    margin-right: 8px;
+}
+
+div.music-controls ul.player-buttons div.slider {
+    padding: 20px 0;
+}

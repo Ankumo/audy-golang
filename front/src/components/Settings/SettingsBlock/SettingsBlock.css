@@ -1,0 +1,34 @@
+div.settings-block {
+    margin-bottom: 48px;
+    width: 400px;
+}
+
+div.settings-block:last-child {
+    margin-bottom: 24px;
+}
+
+div.settings-block h2 {
+    font-size: 20px;
+    margin-bottom: 16px;
+}
+
+div.settings-block div.form-input,
+div.settings-block button {
+    width: 100%;
+    margin: 0;
+}
+
+div.settings-block>button {
+    margin: 24px 0 0 0;
+}
+
+div.settings-block div.block-body span.with-dropdown {
+    margin: -16px 0;
+    color: var(--text-primary-active);
+    display: block;
+    line-height: 32px;
+}
+
+div.settings-block div.block-body>span {
+    color: var(--text-primary-active);
+}

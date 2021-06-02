@@ -1,0 +1,117 @@
+div.modal div.modal-header {
+    padding: 24px 24px 16px 24px;
+    font-size: 22px;
+    color: var(--text-primary-active);
+}
+
+div.body-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 16px 0;
+}
+
+div.body-wrapper>div {
+    margin: 0 8px;
+}
+
+div.avatar-frame {
+    cursor: grab;
+    position: relative;
+    border-radius: 350px;
+    width: 350px;
+    height: 350px;
+    margin: 24px 0;
+    border: 1px solid var(--frame);
+    box-sizing: border-box;
+    overflow: hidden;
+    transition: background-color .2s;
+}
+
+div.avatar-frame canvas {
+    position: absolute;
+    top: 50%;
+    left: -50%;
+    transform-origin: left top;
+}
+
+div.modal div.modal-footer button {
+    width: 100%;
+    margin: 0;
+    padding: 8px 0;
+}
+
+div.modal div.modal-footer div:hover {
+    background-color: rgba(255, 255, 255, .05);
+    color: var(--text-primary-active);
+}
+
+div.modal div.modal-footer div {
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    border-top: 1px solid var(--divider);
+    transition: color .2s, background-color .2s;
+    border-left: 1px solid var(--divider);
+}
+
+div.modal div.modal-footer div:first-child {
+    border-left: none;
+}
+
+div.modal div.modal-footer {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+div.modal div.modal-body span {
+    font-size: 14px;
+    color: var(--text-primary-active);
+    width: 100%;
+    text-align: center;
+    display: block;
+    margin: 8px 0;
+}
+
+div.fill-colors>div {
+    border: 2px solid var(--frame);
+    transition: border-color .2s, background .2s;
+    width: 32px;
+    height: 32px;
+    border-radius: 36px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+div.fill-colors>div:hover,
+div.fill-colors>div.active {
+    border-color: var(--frame-active);
+}
+
+div.fill-colors {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .2s;
+}
+
+div.fill-colors.has-alpha {
+    opacity: 1;
+    pointer-events: unset;
+}
+
+div.modal div.slider {
+    height: 200px;
+}
+
+div.zoom {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+div.zoom img {
+    width: 20px;
+    height: 20px;
+    margin: 16px 0;
+}

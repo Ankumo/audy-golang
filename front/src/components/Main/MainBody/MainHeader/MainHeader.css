@@ -1,0 +1,7 @@
+div.main-header {
+    margin: 16px 28px 0 16px;
+}
+
+div.main-header div.editable-header {
+    margin-right: auto;
+}

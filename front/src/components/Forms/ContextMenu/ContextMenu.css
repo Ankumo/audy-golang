@@ -1,0 +1,53 @@
+div.context-menu {
+    position: fixed;
+    transition: opacity .2s, left .15s;
+    z-index: -100;
+    opacity: 0;
+}
+
+div.context-menu.opened {
+    z-index: 10;
+    opacity: 1;
+}
+
+div.context-menu.no-scroll.opened {
+    overflow-y: hidden;
+}
+
+div.context-menu ul {
+    list-style: none;
+    display: flex;
+    overflow-y: auto;
+    background: var(--bg-primary);
+    border-radius: 6px;
+    flex-direction: column;
+}
+
+div.context-menu.rev ul {
+    flex-direction: column-reverse;
+}
+
+div.context-menu ul li {
+    padding: 16px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: color .2s, background-color .2s;
+}
+
+div.context-menu ul li:hover:not(.divider) {
+    background: var(--bg-context);
+    color: var(--text-primary-active);
+}
+
+div.context-menu ul li.divider {
+    height: 1px;
+    padding: 4px 0;
+    margin: 0;
+    background: var(--divider);
+    cursor: default;
+    background-clip: content-box;
+}
+
+div.context-menu ul li img {
+    opacity: 0.85;
+}

@@ -1,0 +1,30 @@
+div.musicbar {
+    width: 100%;
+    pointer-events: fill;
+    height: 78px;
+    position: absolute;
+    bottom: 0;
+    z-index: 10;
+}
+
+div.musicbar * {
+    user-select: none;
+}
+
+div.musicbar:hover div.music-controls ul.player-buttons li.volume {
+    opacity: 1;
+    margin-right: 16px;
+}
+
+div.musicbar:hover div.music-seekbar div.seekbar-times {
+    opacity: 1;
+}
+
+div.musicbar:hover div.music-seekbar div.seekbar-progress,
+div.musicbar:hover div.music-seekbar ul.seekbar-buffer li {
+    border-radius: 0;
+}
+
+div.musicbar:hover div.music-seekbar {
+    height: 12px;
+}

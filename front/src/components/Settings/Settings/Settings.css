@@ -1,0 +1,101 @@
+div.settings {
+    position: fixed;
+    z-index: -11;
+    opacity: 0;
+    top: 100px;
+    transition: opacity .2s, top .4s;
+    height: calc(100vh - 78px);
+    background: var(--settings-bg);
+    width: 100%;
+    left: 0;
+    padding: 24px 8px 0 8px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-end;
+}
+
+div.settings.opened {
+    z-index: 9;
+    top: 0;
+    opacity: 1;
+}
+
+div.settings ul.sidebar {
+    list-style: none;
+    width: 300px;
+    padding-right: 8px;
+    box-sizing: border-box;
+}
+
+div.settings ul.sidebar li {
+    padding: 16px;
+    transition: color .2s, background .2s;
+    cursor: pointer;
+    margin-bottom: 4px;
+    border-radius: 6px;
+}
+
+div.settings ul.sidebar li.active {
+    color: var(--text-primary-active);
+    background: var(--bg-primary);
+}
+
+div.settings ul.sidebar li:hover {
+    color: var(--text-primary-active);
+}
+
+div.settings div.close {
+    position: fixed;
+    right: 24px;
+    top: 20px;
+    z-index: 2;
+}
+
+div.settings div.main {
+    padding-left: 16px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: calc(50% + 200px);
+}
+
+div.settings div.close img {
+    width: 48px;
+    height: 48px;
+}
+
+div.settings div.main h1 {
+    font-size: 50px;
+    color: var(--text-primary-active);
+}
+
+div.settings div.main>div {
+    overflow-y: auto;
+    height: auto;
+    width: 100%;
+}
+
+div.settings div.main>div::-webkit-scrollbar-track {
+    margin-bottom: 8px;
+}
+
+div.settings div.main.from-bottom-enter {
+    opacity: 0;
+    margin-top: 50px;
+}
+
+div.settings div.main.from-bottom-enter-active {
+    opacity: 1;
+    margin-top: 0;
+    transition: opacity .2s, margin-top .2s;
+}
+
+div.settings div.main.from-bottom-exit {
+    opacity: 1;
+}
+
+div.settings div.main.from-bottom-exit-active {
+    opacity: 0;
+    transition: opacity .3s;
+}

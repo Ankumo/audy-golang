@@ -1,0 +1,79 @@
+div.track-drag-bubble div.counter {
+    position: fixed;
+    z-index: 15;
+    transform-origin: top left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    background: var(--bg-primary);
+    width: 60px;
+    font-size: 17px;
+    padding: 6px 0;
+    color: var(--text-primary-active);
+}
+
+div.track-drag-bubble div.spread-1 {
+    opacity: .5;
+    position: fixed;
+    z-index: 14;
+    transform-origin: top left;
+    width: 54px;
+    height: 32px;
+    border-radius: 6px;
+    background: var(--bg-primary);
+    margin: 3px 3px 0 3px;
+    transition-property: left, top;
+    transition-duration: 25ms;
+}
+
+div.track-drag-bubble div.spread-2 {
+    opacity: .3;
+    position: fixed;
+    z-index: 13;
+    transform-origin: top left;
+    width: 50px;
+    height: 32px;
+    border-radius: 6px;
+    background: var(--bg-primary);
+    transition-property: left, top;
+    margin: 6px 6px 0 6px;
+    transition-duration: 40ms;
+}
+
+div.track-drag-bubble.track-drag-appear-enter div.counter,
+div.track-drag-bubble.track-drag-appear-enter div.spread-1,
+div.track-drag-bubble.track-drag-appear-enter div.spread-2 {
+    opacity: 0;
+    transform: scale(0);
+}
+
+div.track-drag-bubble.track-drag-appear-enter-active div.counter {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity .2s, transform .2s;
+}
+
+div.track-drag-bubble.track-drag-appear-enter-active div.spread-1,
+div.track-drag-bubble.track-drag-appear-enter-active div.spread-2 {
+    transform: scale(1);
+    transition: opacity .2s, transform .2s;
+}
+
+div.track-drag-bubble.track-drag-appear-exit div.counter {
+    opacity: 1;
+    transform: scale(1);
+}
+
+div.track-drag-bubble.track-drag-appear-exit div.spread-1,
+div.track-drag-bubble.track-drag-appear-exit div.spread-2 {
+    transform: scale(1);
+}
+
+div.track-drag-bubble.track-drag-appear-exit-active div.counter,
+div.track-drag-bubble.track-drag-appear-exit-active div.spread-1,
+div.track-drag-bubble.track-drag-appear-exit-active div.spread-2 {
+    opacity: 0;
+    transform: scale(0);
+    transition: opacity .2s, transform .2s;
+}

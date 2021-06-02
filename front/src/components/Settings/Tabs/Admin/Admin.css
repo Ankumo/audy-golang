@@ -1,0 +1,64 @@
+div.admin div.no-items {
+    max-width: 80%;
+}
+
+div.admin table {
+    width: 100%;
+    margin-top: 18px;
+}
+
+div.admin table tr td {
+    padding: 8px;
+    transition: background .2s;
+    cursor: default !important;
+}
+
+div.admin table tr td * {
+    cursor: default !important;
+}
+
+div.admin table tr.active td {
+    color: var(--text-active);
+}
+
+div.admin table tr td:first-child {
+    font-variant-numeric: tabular-nums;
+    border-radius: 6px 0 0 6px;
+    padding-left: 16px;
+}
+
+div.admin table tr td:last-child {
+    width: 10px;
+    border-radius: 0 6px 6px 0;
+    padding-right: 16px;
+}
+
+div.admin table tr.context-active td {
+    background: var(--bg-context);
+}
+
+div.admin div.loading-server-data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+}
+
+div.admin div.loading-server-data span {
+    color: var(--text-primary-active);
+}
+
+div.admin div.loading-server-data img {
+    width: 100px;
+    padding: 16px;
+}
+
+div.admin div.settings-block.server_vars div.form-input:not(:last-child) {
+    margin-bottom: 24px;
+}
+
+div.admin div.settings-block.utilities div.block-body>span {
+    margin-bottom: 16px;
+    display: block;
+    color: var(--text-primary-active);
+}

@@ -1,0 +1,154 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Inter, sans-serif;
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    min-width: 1024px;
+}
+
+@keyframes spin {
+    from {
+        transform: rotateZ(0deg);
+    }
+    to {
+        transform: rotateZ(360deg);
+    }
+}
+
+.spin {
+    cursor: not-allowed;
+    animation: 1s linear 0s infinite spin;
+}
+
+*::-webkit-scrollbar {
+    width: 8px;
+    background: var(--scrollbar-bg);
+}
+
+*::-webkit-scrollbar-track {
+    background: var(--scrollbar-bg);
+    margin: 8px 0;
+}
+
+*::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb);
+    border-radius: 50px;
+    min-height: 60%;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbar-thumb-hover);
+}
+
+img.svg {
+    filter: var(--svg-filter);
+    opacity: .5;
+    transition: opacity .2s;
+}
+
+img.svg.hover:hover {
+    opacity: .85;
+    cursor: pointer;
+}
+
+div#root,
+div.app-wrapper {
+    height: 100%;
+    width: 100%;
+}
+
+div.app-wrapper {
+    position: relative;
+    display: grid;
+    grid-template-rows: auto 78px;
+    grid-template-columns: 300px auto 300px;
+    background-color: var(--main-bg);
+}
+
+div.album-background {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    filter: var(--bg-filter);
+    margin: auto;
+    transform: scale(1.2);
+    z-index: -10;
+    background-repeat: no-repeat;
+    background-size: 90%;
+    background-position: center;
+    background-image: none;
+    transition: background-image .2s;
+}
+
+div.album-background::after {
+    content: '';
+    opacity: 0;
+    background: var(--main-bg-whiteboard);
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -9;
+    transition: opacity .2s;
+}
+
+div.album-background.default::after {
+    opacity: 1;
+}
+
+input.global-color-picker {
+    opacity: 0;
+    z-index: -1000;
+    position: fixed;
+}
+
+.fade-enter {
+    opacity: 0;
+}
+
+.fade-enter-active {
+    opacity: 1;
+    transition: opacity .2s;
+}
+
+.fade-exit {
+    opacity: 1;
+}
+
+.fade-exit-active {
+    opacity: 0;
+    transition: opacity .2s;
+    pointer-events: none;
+}
+
+div.scroll-view {
+    overflow: auto;
+    height: auto;
+}
+
+@media (max-width: 1380px) {
+    div.app-wrapper {
+        grid-template-columns: 300px auto;
+    }
+    div.app-wrapper>div.main {
+        margin-right: 4px;
+    }
+    div.app-wrapper div.searchbar {
+        width: 50% !important;
+    }
+}

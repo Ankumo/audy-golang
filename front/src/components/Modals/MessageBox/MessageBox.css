@@ -1,0 +1,10 @@
+div.modal div.modal-body div.modal-pre {
+    font-family: Consolas;
+    background: var(--bg-primary);
+    border-radius: 4px;
+    padding: 12px;
+    margin-top: 8px;
+    max-height: 400px;
+    overflow-y: auto;
+    white-space: pre-line;
+}

@@ -1,0 +1,32 @@
+div.tracklist-actions {
+    display: inline-flex;
+    align-items: center;
+    justify-items: flex-start;
+    margin: 0 12px 0 16px;
+}
+
+div.tracklist-actions div.select {
+    justify-self: flex-end;
+    margin-left: auto;
+}
+
+div.tracklist-actions div.select ul {
+    left: unset;
+    right: 0;
+}
+
+div.tracklist-actions div.left {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+div.tracklist-actions div.left span.tracks-count a {
+    color: var(--text-primary-active);
+}
+
+div.tracklist-actions div.left button {
+    padding: 8px 0;
+    margin-left: 24px;
+    margin-right: 0;
+}

@@ -1,0 +1,86 @@
+div.sidebar {
+    grid-column: 1;
+    grid-row: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+div.sidebar ul.playlists {
+    margin: 16px 4px 12px 0;
+    list-style: none;
+}
+
+div.sidebar ul.playlists li {
+    cursor: pointer;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: background .15s, box-shadow .2s, color .2s;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-bottom: 5px;
+    line-height: 32px;
+    box-shadow: 0 0 0 2px transparent;
+    border: 2px solid transparent;
+    box-sizing: border-box;
+}
+
+div.sidebar ul.playlists li:hover {
+    color: var(--text-primary-active);
+}
+
+div.sidebar ul.playlists.dragging li:hover {
+    box-shadow: 0 0 0 2px var(--success);
+}
+
+div.sidebar ul.playlists.dragging li.lib:hover,
+div.sidebar ul.playlists.dragging li.active:hover {
+    box-shadow: 0 0 0 2px var(--danger);
+}
+
+div.sidebar ul.playlists li.active {
+    background: var(--main-bg-primary);
+    color: var(--text-primary-active);
+}
+
+div.sidebar div.dropdown {
+    margin: 8px 0 0 8px;
+}
+
+div.sidebar div.dropdown>div img {
+    border-radius: 50px;
+    width: 32px;
+    height: 32px;
+    opacity: 1;
+}
+
+div.sidebar div.dropdown>div span {
+    font-size: 22px;
+    color: var(--text-primary-active);
+}
+
+div.sidebar div.dropdown>ul {
+    width: 100%;
+}
+
+div.sidebar div.dropdown>div::after {
+    padding: 5px;
+}
+
+div.sidebar div.dropdown.opened>div::after {
+    margin-bottom: -2px;
+}
+
+div.sidebar>div.scroll-view::-webkit-scrollbar-track {
+    margin: 16px 0 12px 0;
+}
+
+div.sidebar div.dropdown>ul>li>img {
+    margin: 4px 12px 4px 4px;
+}
+
+div.sidebar div.scroll-view {
+    padding-left: 8px;
+}

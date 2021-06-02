@@ -1,0 +1,3 @@
+div.app-wrapper div.main-wrapper>div.searchbar {
+    background: var(--main-bg-primary);
+}

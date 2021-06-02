@@ -1,0 +1,86 @@
+div.tracklist tr {
+    cursor: pointer;
+    margin-right: 4px;
+    transition: transform .2s;
+}
+
+div.tracklist tr.context-active td {
+    background: var(--bg-context);
+}
+
+div.tracklist tr:hover td,
+div.tracklist tr td.name span {
+    color: var(--text-primary-active) !important;
+}
+
+div.tracklist tr.active td,
+div.tracklist tr.active td span {
+    color: var(--text-active) !important;
+}
+
+div.tracklist tr:hover td.duration span {
+    color: var(--text-primary-active);
+}
+
+div.tracklist tr td {
+    padding: 8px 0;
+    line-height: 32px;
+    transition: color .15s, background .2s;
+}
+
+div.tracklist tr td.name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 500px;
+}
+
+div.tracklist tr td.duration span {
+    transition: color .2s;
+    position: relative;
+}
+
+div.tracklist tr td.duration span::after {
+    content: '';
+    background-image: url(../../../../assets/img/dots.svg);
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity .2s;
+    position: absolute;
+    left: 25%;
+    top: 0;
+    filter: var(--svg-filter);
+}
+
+div.tracklist tr td.num {
+    padding-left: 16px;
+    font-variant-numeric: tabular-nums;
+    width: 64px;
+    overflow: hidden;
+}
+
+div.tracklist tr td.duration {
+    text-align: right;
+    padding-right: 16px;
+    font-variant-numeric: tabular-nums;
+}
+
+div.tracklist tr.moving {
+    position: fixed;
+    z-index: 1001;
+    display: inline-table;
+    pointer-events: none;
+    margin: 0;
+}
+
+div.tracklist tr.moving td {
+    background: var(--bg-primary);
+}
+
+div.tracklist tr td.num div.audy-chk {
+    margin: 0;
+}

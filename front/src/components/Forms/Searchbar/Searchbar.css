@@ -1,0 +1,72 @@
+div.searchbar {
+    border-radius: 6px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 8px 52px;
+    background: var(--bg-primary);
+    cursor: text;
+    box-sizing: border-box;
+    position: relative;
+}
+
+div.searchbar img {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 16px;
+    margin: auto 0;
+}
+
+div.searchbar img.search-clear {
+    left: unset;
+    right: 16px;
+    width: 16px;
+    height: 16px;
+    transition: opacity .2s;
+    cursor: pointer;
+}
+
+div.searchbar input {
+    font-size: 16px;
+    background: transparent;
+    border: 0;
+    justify-self: auto;
+    margin: 0 auto;
+    transition: margin .4s;
+    line-height: 140%;
+}
+
+div.searchbar input:focus {
+    outline: none;
+    margin-left: 0 !important;
+    width: 100%;
+}
+
+div.searchbar span {
+    position: absolute;
+    z-index: -10000;
+    color: transparent;
+    font-size: 16px;
+}
+
+div.searchbar.has-value input {
+    color: var(--text-primary-active);
+    width: 100% !important;
+    margin-left: 0 !important;
+}
+
+div.searchbar.has-value img.search-clear:hover {
+    opacity: .85 !important;
+}
+
+div.searchbar.has-value img.search-clear.fade-enter {
+    opacity: 0;
+}
+
+div.searchbar.has-value img.search-clear.fade-enter-active {
+    opacity: 0.5;
+    transition: opacity .2s;
+}

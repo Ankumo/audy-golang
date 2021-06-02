@@ -1,0 +1,74 @@
+div.music-seekbar {
+    height: 4px;
+    position: absolute;
+    bottom: 74px;
+    width: 100%;
+    left: 0;
+    transition: height .2s;
+    overflow: hidden;
+}
+
+div.music-seekbar div.seekbar-line {
+    height: 100%;
+    cursor: pointer;
+    z-index: 100;
+    position: relative;
+    overflow: hidden;
+    margin: 0 24px;
+    border-radius: 50px;
+}
+
+div.music-seekbar div.seekbar-line ul.seekbar-buffer {
+    height: 100%;
+    background: var(--music-seekbar-bg);
+    list-style: none;
+    margin: 0;
+    z-index: 107;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+div.music-seekbar ul.seekbar-buffer li {
+    background-color: var(--music-seekbar-buffer);
+    position: absolute;
+    top: 0;
+    height: 100%;
+    z-index: 107;
+    border-radius: 40px;
+    mix-blend-mode: var(--seekbar-buffer-blend-mode);
+}
+
+div.music-seekbar div.seekbar-progress {
+    z-index: 110 !important;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: var(--music-seekbar-progress);
+    border-radius: 10px;
+    transition: border-radius .1s, width .15s;
+    mix-blend-mode: var(--seekbar-progress-blend-mode);
+}
+
+div.music-seekbar div.seekbar-times {
+    height: 0;
+    opacity: 0;
+    transition: opacity .2s ease;
+}
+
+div.music-seekbar div.seekbar-times span {
+    color: var(--text-secondary-active);
+    font-size: 11px;
+    position: absolute;
+    top: -1px;
+    z-index: 110;
+    pointer-events: none;
+}
+
+div.music-seekbar div.seekbar-times span.current {
+    left: 32px;
+}
+
+div.music-seekbar div.seekbar-times span.duration {
+    right: 32px;
+}

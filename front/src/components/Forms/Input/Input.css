@@ -1,0 +1,109 @@
+div.form-input {
+    border-radius: 6px;
+    display: flex;
+    transition: background .2s;
+    min-width: 100px;
+    cursor: text;
+    border: 1px solid var(--bg-primary);
+    box-sizing: border-box;
+    position: relative;
+    height: 54px;
+    background: var(--bg-primary);
+}
+
+div.form-input input {
+    border: 0;
+    font-size: 16px;
+    color: var(--text-primary-active);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: transparent;
+    width: 100%;
+    padding: 24px 8px 6px 16px;
+    box-sizing: border-box;
+    transition: padding .2s;
+    line-height: 140%;
+}
+
+div.form-input.multiline>div {
+    position: absolute;
+    box-sizing: border-box;
+    transition: padding .2s;
+    padding: 24px 8px 6px 16px;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+div.form-input textarea {
+    resize: none;
+    line-height: 140%;
+    background: transparent;
+    width: 100%;
+    font-size: 16px;
+    border: 0;
+    padding-right: 4px;
+    color: var(--text-primary-active);
+}
+
+div.form-input:focus-within {
+    background: transparent;
+}
+
+div.form-input input:focus,
+div.form-input textarea:focus {
+    outline: none;
+}
+
+div.form-input::after {
+    content: attr(data-placeholder);
+    position: absolute;
+    top: 0;
+    font-size: 16px;
+    left: 0;
+    padding: 16px;
+    transition: font-size .2s, padding .2s;
+    pointer-events: none;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: calc(100% - 16px);
+    white-space: nowrap;
+}
+
+div.form-input:focus-within::after,
+div.form-input.has-value::after {
+    font-size: 12px;
+    padding: 8px 0 0 8px;
+}
+
+div.form-input:focus-within input,
+div.form-input.has-value input,
+div.form-input:focus-within>div,
+div.form-input.has-value>div {
+    padding-left: 8px;
+}
+
+div.form-input.multiline {
+    height: 188px;
+}
+
+div.form-input.multiline>div {
+    overflow: hidden;
+}
+
+div.form-input.disabled,
+div.form-input.disabled textarea,
+div.form-input.disabled input {
+    cursor: not-allowed;
+}
+
+div.form-input input[type="number"]::-webkit-outer-spin-button,
+div.form-input input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+div.form-input input[type="number"] {
+    -moz-appearance: textfield;
+}

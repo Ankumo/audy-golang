@@ -1,0 +1,43 @@
+div.tracklist table {
+    width: 100%;
+    padding: 0 4px 12px 0;
+    border-collapse: separate;
+    user-select: none;
+}
+
+div.tracklist table tr td:first-child {
+    border-radius: 6px 0 0 6px;
+}
+
+div.tracklist table tr td:last-child {
+    border-radius: 0 6px 6px 0;
+}
+
+div.tracklist table.sortable tr:hover td.duration span {
+    color: transparent !important;
+}
+
+div.tracklist table.sortable tr:hover td.duration span::after {
+    opacity: 0.5;
+}
+
+div.tracklist table.sortable tr td.duration span:hover::after {
+    opacity: 0.85;
+}
+
+div.tracklist {
+    overflow-y: scroll;
+}
+
+div.tracklist::-webkit-scrollbar-track {
+    margin-bottom: 12px;
+}
+
+div.tracklist table tr.moving-placeholder td {
+    border: 2px dashed var(--frame);
+    border-radius: 6px;
+}
+
+div.tracklist table div.checkbox {
+    margin: 0;
+}

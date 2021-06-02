@@ -1,0 +1,43 @@
+div.loading {
+    width: 100vw;
+    background: var(--loading-bg);
+    height: 100vh;
+    position: fixed;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.loading-wrapper {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+div.loading div.loading-wrapper h1 {
+    color: var(--loading-text);
+    margin: 16px;
+}
+
+div.loading div.loading-wrapper button {
+    margin-top: 8px;
+}
+
+div.loading div.loading-wrapper span {
+    margin: 8px 0;
+}
+
+div.loading div.loading-wrapper span strong {
+    color: var(--text-primary-active);
+    font-variant-numeric: tabular-nums;
+}
+
+div.loading.fade-appear-active {
+    transition-duration: 1.5s;
+}
+
+div.loading.fade-exit-active {
+    transition-duration: .5s;
+}

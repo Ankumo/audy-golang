@@ -1,0 +1,141 @@
+div.select {
+    min-width: 100px;
+    position: relative;
+    border-radius: 6px;
+    user-select: none;
+    transition: overflow .2s, background .2s, border-radius .2s, opacity .2s, left .1s;
+    display: inline-block;
+    padding: 8px 16px;
+}
+
+div.select.opened {
+    background-color: var(--bg-primary);
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+div.select>div {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+div.select>div span {
+    line-height: 32px;
+    white-space: nowrap;
+}
+
+div.select:not(.no-caret)>div::after {
+    content: '';
+    border: solid var(--text-primary);
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 4px;
+    transition: border-color .2s, margin .2s;
+    transform: rotate(45deg);
+    margin: 0 4px 4px 8px;
+}
+
+div.select.opened:not(.no-caret)>div::after {
+    border-width: 2px 0 0 2px;
+    margin-bottom: -1px;
+    border-color: var(--text-primary-active);
+}
+
+div.select>div>img {
+    width: 22px;
+    height: 22px;
+    opacity: .5;
+    margin-right: 8px;
+}
+
+div.select.opened ul {
+    max-height: 400%;
+    opacity: 1;
+    overflow-y: auto;
+    z-index: 1;
+}
+
+div.select.opened ul li {
+    opacity: 1;
+}
+
+div.select ul {
+    max-height: 0;
+    position: absolute;
+    top: 48px;
+    transition: max-height .2s, opacity .3s;
+    list-style: none;
+    background: var(--bg-primary);
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+div.select ul li {
+    padding: 8px 16px;
+    line-height: 32px;
+    opacity: 0;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: background-color .2s, color .2s;
+}
+
+div.select ul li.active {
+    color: var(--text-primary-active);
+}
+
+div.select ul li.divider {
+    height: 1px;
+    padding: 4px 0;
+    margin: 0;
+    background: var(--divider);
+    cursor: default;
+    background-clip: content-box;
+}
+
+div.select ul li img {
+    width: 24px;
+    height: 24px;
+    margin: 4px 8px 4px 0;
+    float: left;
+    opacity: .85;
+}
+
+div.select ul li.active img {
+    opacity: .85;
+}
+
+div.select ul li:hover:not(.divider) {
+    background: var(--bg-context);
+    color: var(--text-primary-active);
+}
+
+div.select.naked {
+    display: flex;
+    min-width: unset;
+}
+
+div.select.opened.naked {
+    background: transparent;
+}
+
+div.select.naked ul {
+    border-radius: 6px;
+    display: inline;
+    width: max-content;
+}
+
+div.select.no-scroll ul {
+    overflow-y: hidden;
+    max-height: 100vh;
+}
+
+div.select>div:hover::after {
+    border-color: var(--text-primary-active);
+}

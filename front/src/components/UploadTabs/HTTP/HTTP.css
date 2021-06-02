@@ -1,0 +1,68 @@
+div.upload-tab.http table {
+    padding: 0 16px 16px 16px;
+    width: 100%;
+    overflow-y: overlay;
+    max-height: 400px;
+    table-layout: auto;
+    display: inline-block;
+    margin-top: 16px;
+}
+
+div.upload-tab.http table thead {
+    width: 100%;
+}
+
+div.upload-tab.http table thead th {
+    position: sticky;
+    top: 0;
+    z-index: 10000;
+    overflow: hidden;
+    color: var(--text-primary-active);
+}
+
+div.upload-tab.http table tr th,
+div.upload-tab.http table tr td {
+    padding: 12px;
+    text-align: left;
+    font-variant-numeric: tabular-nums;
+}
+
+div.upload-tab.http table tr td.file-name {
+    overflow: hidden;
+    max-width: 400px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+div.upload-tab.http table thead tr th {
+    border-bottom: 1px solid var(--divider);
+}
+
+div.upload-tab.http table tr td.cancel-btn div {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+div.upload-tab.http table tr td img {
+    width: 20px;
+    height: 20px;
+    display: block;
+}
+
+div.upload-tab.http table tbody tr.active {
+    background-image: linear-gradient(var(--bg-context), var(--bg-context));
+    background-repeat: no-repeat;
+    transition: background-size .2s;
+    background-size: 0% auto;
+}
+
+div.upload-tab.http table tbody tr.active td:last-child {
+    border-bottom-right-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+div.upload-tab.http table tbody tr.active td:first-child {
+    border-bottom-left-radius: 6px;
+    border-top-left-radius: 6px;
+}

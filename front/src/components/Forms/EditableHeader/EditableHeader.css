@@ -1,0 +1,66 @@
+div.editable-header {
+    display: inline-flex;
+    align-items: center;
+    max-width: 80%;
+    position: relative;
+    cursor: text;
+    flex-wrap: nowrap;
+}
+
+div.editable-header:not(.readonly)::after {
+    content: '';
+    display: block;
+    background-image: url(../../../assets/img/edit_header.svg);
+    background-size: 32px 32px;
+    min-width: 32px;
+    height: 32px;
+    opacity: 0;
+    transition: opacity .2s;
+    margin: auto 0 auto 16px;
+    filter: var(--svg-filter);
+    background-repeat: no-repeat;
+}
+
+div.editable-header:hover::after,
+div.editable-header:focus-within::after {
+    opacity: 0.5;
+}
+
+div.editable-header.readonly,
+div.editable-header.readonly * {
+    cursor: default;
+}
+
+div.editable-header input {
+    font-size: 48px;
+    border: 0;
+    opacity: 0;
+    background: transparent;
+    color: var(--text-primary-active);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+div.editable-header input:focus {
+    outline: none;
+    opacity: 1;
+}
+
+div.editable-header span {
+    font-size: 48px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    color: var(--text-primary-active);
+    pointer-events: none;
+}
+
+div.editable-header:not(.has-value) span {
+    opacity: 0.5;
+}
+
+div.editable-header.has-value:focus-within span {
+    opacity: 0;
+}

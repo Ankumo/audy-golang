@@ -1,0 +1,55 @@
+div.color-input {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+}
+
+div.color-input div.sample {
+    min-width: 40px;
+    height: 40px;
+    border: 2px solid var(--frame);
+    transition: border-color .2s;
+    box-sizing: border-box;
+    border-radius: 100px;
+    cursor: pointer;
+    margin-left: 16px;
+    position: relative;
+    overflow: hidden;
+}
+
+div.color-input:not(.disabled) div.sample:hover {
+    border-color: var(--frame-active);
+}
+
+div.color-input.not-supported div.sample {
+    background: rgba(255, 255, 255, .8) !important;
+}
+
+div.color-input.not-supported div.sample::after {
+    content: '';
+    width: 1px;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    background: red;
+    transform: rotate(45deg);
+}
+
+div.color-input.not-supported div.sample::before {
+    content: '';
+    width: 1px;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    background: red;
+    transform: rotate(135deg);
+}
+
+div.color-input.disabled,
+div.color-input.disabled div.sample {
+    cursor: not-allowed;
+}

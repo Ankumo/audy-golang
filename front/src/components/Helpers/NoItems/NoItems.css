@@ -1,0 +1,27 @@
+div.no-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    max-width: 50%;
+    padding: 24px 0;
+}
+
+div.no-items img {
+    max-width: 25%;
+    margin: 12px;
+}
+
+div.no-items>button {
+    margin: 8px;
+}
+
+div.no-items>h1 {
+    color: var(--text-primary-active);
+    text-align: center;
+}
+
+div.no-items>span {
+    text-align: center;
+}
