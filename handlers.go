@@ -156,6 +156,11 @@ func R_upload(c *gin.Context) {
 		return
 	}
 
+	if _, err = os.Stat("upload"); os.IsNotExist(err) {
+		os.Mkdir("upload", os.ModePerm)
+		os.Mkdir("upload/ftp_upload", os.ModePerm)
+	}
+
 	filePath := fmt.Sprint("upload/", trackFile.Filename)
 	c.SaveUploadedFile(trackFile, filePath)
 
